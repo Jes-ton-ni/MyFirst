@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Me</title>
+</head>
+<style type="text/css">
+
+body{
+	display: flex;
+	justify-content: center;
+	/*-ms-align-items: center;*/
+	align-items: center;
+	/*text-align: center;*/
+	/*min-height: 100vh;*/
+	background-color: #fff;
+}
+.about_me{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+  	align-items: center;
+}
+
+.border{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	border-radius: 50%;
+	/*-ms-align-items: center;*/
+	align-items: center;
+	overflow: hidden;
+}
+
+.border::before{
+	content: '';
+	position: absolute;
+	width: 70%;
+	height: 140%;
+	background: linear-gradient(#000000, #ffffff);
+	animation: rotate 4s linear infinite;
+}
+
+.border::after{
+	content: '';
+	position: absolute;
+	background: #fff;
+	border-radius: 50%;
+	inset: 3px;
+}
+
+.about_me .border .image{
+	display: block;
+	padding: 10px;
+	border-radius: 50%;
+	z-index: 2;
+}
+
+.about_me .image img{
+	display: block;
+	border-radius: 50%;
+	width: 290px; 
+  	height: 290px; 
+  	object-fit: cover;
+}
+
+@keyframes rotate {
+    from{
+    	transform: rotate(0deg);
+    }
+    to{
+    	transform: rotate(360deg);
+    }
+}
+
+.greetings h2{
+	font-family: helvetica;
+	font-size: 24px;
+	font-weight: 600;
+	color: #787cb5;
+	padding: 14px 0px 15px;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+}
+
+.greetings p{
+	color: #aaabb0;
+	font-size: 20px;
+	line-height: 1.2;
+	text-align: justify;
+	padding-bottom:8px;
+}
+
+</style>
+<body>
+
+	<div class="about_me">
+		<div class="border">
+		    <div class="image">
+		        <img src="IMG_8549.JPG">
+		    </div>  
+		</div>
+	              
+	    <div class="greetings">
+	        <h2>BSIT 3B Student</h2>
+	        <p>Hello! I'm Jestoni Vargas, and I have no life (>_<)</p>
+	    </div>
+	</div>
+
+</body>
+</html>
